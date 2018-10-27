@@ -1,0 +1,2 @@
+# js-mod
+javascript module
