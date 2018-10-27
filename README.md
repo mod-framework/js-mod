@@ -6,3 +6,6 @@ simple
 most recommended
 
 popular code
+
+# License
+MIT
