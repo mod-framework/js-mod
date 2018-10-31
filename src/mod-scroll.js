@@ -85,7 +85,9 @@ mod.scroll=(function mod_scroll(r){
 
 		if(o.type=="V"){
 			mHi();
-			onE(ifr,mHi);
+			onE(ifr,function(){
+				mHi(),re();
+			});
 			r.scroll=function(v,w){
 				switch(w){
 				case 1:v=v*o.target.clientHeight/2;break;
@@ -93,13 +95,16 @@ mod.scroll=(function mod_scroll(r){
 				case 3:o.target.scrollTop=o.target.scrollHeight-o.target.clientHeight,v=0;break;
 				}
 				o.target.scrollTop+=v;
-				var a=o.target.scrollHeight-o.target.clientHeight;
-				track.style.top=(v_h1*o.target.scrollTop/a)+"px";
+				re();
 			};
 			node.onmousedown=function(e){
 				addE(mVd,mVu,mVm);
 				return false;
 			};
+			function re(){
+				var a=o.target.scrollHeight-o.target.clientHeight;
+				track.style.top=(v_h1*o.target.scrollTop/a)+"px";
+			}
 			function mHi(){
 				track.style.height=(o.target.clientHeight*o.target.clientHeight/o.target.scrollHeight)+"px";
 				v_h1=node.clientHeight-track.clientHeight;
