@@ -1,11 +1,11 @@
 mod.scroll=(function mod_scroll(r){
 	r.EndDOM(function(){
 		var a=document.createElement("div");
-		a.innerHTML='<div class="mod-scbar"><div class="mod-sctrack"></div></div>';
+		a.innerHTML='<div class="mod-scbar"><div class="mod-sctrack"></div><iframe class="mod-scifr"></div>';
 		r.node=a.lastChild;
 	
 		a=document.createElement("style");
-		a.textContent=".mod-scbar{z-index:9;position:fixed;user-select:none}.mod-sctrack{position:absolute;left:0;top:0}"+
+		a.textContent=".mod-scbar{z-index:9;position:fixed;user-select:none}.mod-sctrack{position:absolute;left:0;top:0}.mod-scifr{position:absolute;top:0;left:0;width:100%;height:100%;visibility:hidden;pointer-events:none}"+
 		".mod-scbarV{top:0;right:0;width:8px;height:100%}.mod-scbarV .mod-sctrack{width:inherit}"+
 		".mod-scbarH{left:0;bottom:0;width:100%;height:8px}.mod-scbarH .mod-sctrack{height:inherit}";
 		document.head.appendChild(a);
@@ -70,7 +70,7 @@ mod.scroll=(function mod_scroll(r){
 		return c;
 	},
 	new:function(o){
-		var node=this.node.cloneNode(true),track=node.lastChild,
+		var node=this.node.cloneNode(true),tmp=node.children,track=tmp[0],ifr=tmp[1],
 		r={
 			option:o
 		},v_h1=0,v_h2=0;
@@ -81,12 +81,11 @@ mod.scroll=(function mod_scroll(r){
 		
 		node.className+=" mod-scbar"+o.type;
 
-		if(o.parent)o.parent.appendChild(node);
+		if(o.parent)o.parent.appendChild(node);if(o.content)o.content.appendChild(ifr);
 
 		if(o.type=="V"){
 			mHi();
-			track.removeEventListener("resize",mHi);
-			track.addEventListener("resize",mHi);
+			onE(ifr,mHi);
 			r.scroll=function(v,w){
 				switch(w){
 				case 1:v=v*o.target.clientHeight/2;break;
@@ -150,6 +149,11 @@ mod.scroll=(function mod_scroll(r){
 		}
 		function subE(d,u,m){
 			window.removeEventListener("mousedown",d),window.removeEventListener("mouseup",u),window.removeEventListener("mousemove",m);
+		}
+		function onE(a,b){
+			var d=a.contentDocument,w=a.contentWindow;
+			d.open("text/html"),d.close();
+			w.onresize=b;
 		}
 	}
 })
