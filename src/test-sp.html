@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<script src="mod.js"></script>
+<script src="mod-dom.js"></script>
+<script src="mod-spreadsheet.js"></script>
+<style>
+html,body{margin:0;padding:0;height:100%}
+
+</style>
+</head>
+<body>
+<script>
+mod.spreadsheet.EndDOM(function(){
+	var sp=mod.spreadsheet.new({
+		parent:document.body,
+		RowNumber:1,
+		colsText:[1,2,3,4,5,6,7,8],
+		fixedHead:"add"
+	});
+});
+</script>
+</body>
+</html>
