@@ -4,8 +4,10 @@
 .mod-spreadsheet table{border-collapse:collapse}
 .mod-spreadsheet .fixed-thead thead th{width:80px;visibility:hidden}
 .mod-spreadsheet .fixed-thead thead th div{position:fixed;visibility:visible}
-.mod-spreadsheet .fixed-thead tbody{min-height:40px}
-.mod-spreadsheet .fixed-thead tbody td{border:1px solid #ccc}
+.mod-spreadsheet .fixed-thead tbody{min-height:40px;max-height:100%}
+.mod-spreadsheet .fixed-thead tbody tr{height:1em}
+.mod-spreadsheet .fixed-thead tbody td{position:relative;padding:0;border:1px solid #ccc;height:inherit;min-height:1em;vertical-align:bottom}
+.mod-spreadsheet .fixed-thead tbody input{border:0;padding:0;width:1px;height:100%;min-width:100%}
 </style>
 	<div class="lib-svg">
 		<svg><defs>

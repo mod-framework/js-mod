@@ -3,7 +3,7 @@ mod.scroll=(function mod_scroll(r){
 		var a=document.createElement("div");
 		a.innerHTML='<div class="mod-scbar"><div class="mod-sctrack"></div><iframe class="mod-scifr"></div>';
 		r.node=a.lastChild;
-	
+
 		a=document.createElement("style");
 		a.textContent=".mod-scbar{z-index:9;position:fixed;user-select:none}.mod-sctrack{position:absolute;left:0;top:0}.mod-scifr{position:absolute;top:0;left:0;width:100%;height:100%;visibility:hidden;pointer-events:none}"+
 		".mod-scbarV{top:0;right:0;width:8px;height:100%}.mod-scbarV .mod-sctrack{width:inherit}"+
@@ -48,8 +48,8 @@ mod.scroll=(function mod_scroll(r){
 	});
 
 	function whl(e){
-		if(e.shiftKey)r.curH.scroll(e.deltaX);
-		else r.curV.scroll(e.deltaY);
+		if(e.shiftKey)if(r.curH)r.curH.scroll(e.deltaX);
+		else if(r.curV)r.curV.scroll(e.deltaY);
 	}
 
 	return r;
