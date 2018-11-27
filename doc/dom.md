@@ -2,7 +2,7 @@
 
 # class mod_dom
 - [clone(NodeList)](#clonenodelist)
-- [insert(parentNode,NodeList,offset)](#)
+- [insert(parentNode,NodeList,offset)](#insertparentnodenodelistoffset)
 - [insertPrev]
 - [insertNext]
 
