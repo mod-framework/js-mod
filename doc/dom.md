@@ -15,7 +15,7 @@
 ```js
 mod.dom.clone(div.children);
 ```
-back to top(#)
+[back to top](#)
 
 ## insert(parentNode, NodeList, offset)
 * example
