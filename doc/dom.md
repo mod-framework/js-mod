@@ -54,6 +54,7 @@ function new_example0(){
 	<button>A</button><button>B</button><button>C</button><button>TEST</button><button>TEST</button>
 </div>
 ```
+[back to top](#)
 
 
 ## insertPrev(parentNode, NodeList, offset)
@@ -93,6 +94,7 @@ function new_example0(){
 	<button>TEST</button><button>TEST</button><button>A</button><button>B</button><button>C</button>
 </div>
 ```
+[back to top](#)
 
 
 ## insertNext(parentNode, NodeList, offset)
@@ -132,3 +134,4 @@ function new_example0(){
 	<button>A</button><button>B</button><button>C</button><button>TEST</button><button>TEST</button>
 </div>
 ```
+[back to top](#)
