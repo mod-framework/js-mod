@@ -33,13 +33,13 @@ function new_example0(){
 	return a;
 }
 ```
-* offset : 0
+* offset 0
 ```html
 <div>
 	<button>TEST</button><button>TEST</button><button>A</button><button>B</button><button>C</button>
 </div>
 ```
-* offset : -1
+* offset -1
 ```js
 mod.dom.insert(div, [new_example0(),new_example0()], -1);
 
