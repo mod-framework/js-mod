@@ -3,8 +3,8 @@
 # class mod_dom
 - [clone(NodeList)](#clonenodelist)
 - [insert(parentNode, NodeList, offset)](#insertparentnode-nodelist-offset)
-- [insertPrev(parentNode, NodeList[, offset])]
-- [insertNext(parentNode, NodeList[, offset])]
+- [insertPrev(parentNode, NodeList[, offset])](#insertprevparentnode-nodelist-offset)
+- [insertNext(parentNode, NodeList[, offset])](#insertnextparentnode-nodelist-offset)
 
 ## clone(NodeList)
 ```html
@@ -15,6 +15,7 @@
 ```js
 mod.dom.clone(div.children);
 ```
+
 
 ## insert(parentNode, NodeList, offset)
 * example
@@ -32,13 +33,13 @@ function new_example0(){
 	return a;
 }
 ```
-* offset 0
+* offset : 0
 ```html
 <div>
 	<button>TEST</button><button>TEST</button><button>A</button><button>B</button><button>C</button>
 </div>
 ```
-* offset -1
+* offset : -1
 ```js
 mod.dom.insert(div, [new_example0(),new_example0()], -1);
 
@@ -54,15 +55,17 @@ function new_example0(){
 </div>
 ```
 
+
 ## insertPrev(parentNode, NodeList, offset)
-offset 0
+* example
 ```html
 <div>
 	<button>A</button><button>B</button><button>C</button>
 </div>
 ```
+* Button C, offset 0
 ```js
-mod.dom.insertPrev(div.children[2], [new_example0(),new_example0()], 0);
+mod.dom.insertPrev(div.children[0], [new_example0(),new_example0()], 0);
 
 function new_example0(){
 	var a=document.createElement("button");
@@ -70,6 +73,27 @@ function new_example0(){
 	return a;
 }
 ```
+```html
+<div>
+	<button>TEST</button><button>TEST</button><button>A</button><button>B</button><button>C</button>
+</div>
+```
+* Button C, offset 2
+```js
+mod.dom.insertPrev(div.children[2], [new_example0(),new_example0()], 2);
+
+function new_example0(){
+	var a=document.createElement("button");
+	a.textContent="TEST";
+	return a;
+}
+```
+```html
+<div>
+	<button>TEST</button><button>TEST</button><button>A</button><button>B</button><button>C</button>
+</div>
+```
+
 
 ## insertNext(parentNode, NodeList, offset)
 ```html
