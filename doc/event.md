@@ -17,6 +17,6 @@
 <html class="on"><body class="on"></body></html>
 ```
 ```html
-<html class="on"><body class="of"></body></html>
+<html class="on"><body class="off"></body></html>
 ```
 [back to top](#)
