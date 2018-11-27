@@ -17,6 +17,23 @@ mod.dom=(function mod_dom(r){
 
 		return r;
 	},
+	rot:function(list_node){
+		if(list_node.constructor!=Array)list_node=[list_node];
+		var x=list_node.length-1,a=arguments;
+		for(;x>=0;x--){
+			var n=list_node[x].className;
+			if(a.length==2)a=[a[0],a[1],""];
+			for(var i=1,l=a.length;i<l;i++){
+				if(a[i]==""){
+					list_node[x].className=n.replace(/(\s*)$/,"$1"+a[1]);
+					break;
+				}else if(n.match(a[i])){
+					list_node[x].className=n.replace(new RegExp("(\s?)"+a[i]),"$1"+a[(i+1)%l||1]).trim();
+					break;
+				}
+			}
+		}
+	},
 	clone:function(list_node){
 		var i,r=[];
 		for(i=list_node.length-1;i>=0;i--)r[i]=list_node[i].cloneNode(true);
