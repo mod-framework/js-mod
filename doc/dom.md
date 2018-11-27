@@ -63,7 +63,7 @@ function new_example0(){
 	<button>A</button><button>B</button><button>C</button>
 </div>
 ```
-* Button C, offset 0
+* Button A, offset 0
 ```js
 mod.dom.insertPrev(div.children[0], [new_example0(),new_example0()], 0);
 
@@ -96,18 +96,39 @@ function new_example0(){
 
 
 ## insertNext(parentNode, NodeList, offset)
+* example
 ```html
 <div>
-	/*offset 0*/<button>A</button><button>B</button><button>C</button>/*offset -1*/
+	<button>A</button><button>B</button><button>C</button>
 </div>
 ```
+* Button C, offset 0
 ```js
-mod.dom.insert(div, [new_example0(),new_example0()],  0);
-mod.dom.insert(div, [new_example0(),new_example0()], -1);
+mod.dom.insertNext(div.children[0], [new_example0(),new_example0()], 0);
 
 function new_example0(){
 	var a=document.createElement("button");
 	a.textContent="TEST";
 	return a;
 }
+```
+```html
+<div>
+	<button>A</button><button>B</button><button>C</button><button>TEST</button><button>TEST</button>
+</div>
+```
+* Button A, offset 2
+```js
+mod.dom.insertNext(div.children[2], [new_example0(),new_example0()], 2);
+
+function new_example0(){
+	var a=document.createElement("button");
+	a.textContent="TEST";
+	return a;
+}
+```
+```html
+<div>
+	<button>A</button><button>B</button><button>C</button><button>TEST</button><button>TEST</button>
+</div>
 ```
