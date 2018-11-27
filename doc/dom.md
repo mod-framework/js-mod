@@ -19,12 +19,13 @@ mod.dom.clone(div.children);
 ## insert(parentNode,NodeList,offset)
 ```html
 <div>
-	<button>A</button><button>B</button><button>C</button>
+	/*offset 0*/<button>A</button><button>B</button><button>C</button>/*offset -1*/
 </div>
 ```
 ```js
 mod.dom.insert(div, [new_example0(),new_example0()],  0);
 mod.dom.insert(div, [new_example0(),new_example0()], -1);
+
 function new_example0(){
 	var a=document.createElement("button");
 	a.textContent="TEST";
