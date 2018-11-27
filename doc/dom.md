@@ -1,13 +1,18 @@
 # dom
 
 # class mod_dom
-- [rot(NodeList, ...args)](#clonenodelist) toggle, rotate class name
+- [rot(NodeList, ...args)](#rotnodelist-args) toggle, rotate class name
 - [clone(NodeList)](#clonenodelist)
 - [insert(parentNode, NodeList, offset)](#insertparentnode-nodelist-offset)
 - [insertPrev(parentNode, NodeList[, offset])](#insertprevparentnode-nodelist-offset)
 - [insertNext(parentNode, NodeList[, offset])](#insertnextparentnode-nodelist-offset)
 
 ## rot(NodeList, ...args)
+```js
+mod.dom.rot(div,"on");
+mod.dom.rot(div,"on","off","");
+```
+[back to top](#)
 
 ## clone(NodeList)
 ```html
