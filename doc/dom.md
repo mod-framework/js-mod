@@ -2,7 +2,7 @@
 
 # class mod_dom
 - [clone(NodeList)](#clonenodelist)
-- [insert(parentNode,NodeList,offset)](#insertparentnodenodelistoffset)
+- [insert(parentNode, NodeList, offset)](#insertparentnodenodelistoffset)
 - [insertPrev]
 - [insertNext]
 
@@ -16,7 +16,7 @@
 mod.dom.clone(div.children);
 ```
 
-## insert(parentNode,NodeList,offset)
+## insert(parentNode, NodeList, offset)
 ```html
 <div>
 	/*offset 0*/<button>A</button><button>B</button><button>C</button>/*offset -1*/
