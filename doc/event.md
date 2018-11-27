@@ -10,8 +10,8 @@
 ## rot(NodeList, ...args)
 * example
 ```html
-<button name="rot" value="html,body on">TEST</button>
-<button name="rot;rot" value="body on;html off">TEST</button>
+<button name="rot html,body on">TEST</button>
+<button name="rot body on;rot html off">TEST</button>
 ```
 ```html
 <html class="on"><body class="on"></body></html>
