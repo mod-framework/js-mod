@@ -5,3 +5,5 @@
 - [insert]
 - [insertPrev]
 - [insertNext]
+
+### clone
