@@ -1,7 +1,7 @@
 # dom
 
 # class mod_dom
-- [clone(NodeList)](#clone)
+- [clone(NodeList)](#clone(NodeList))
 - [insert]
 - [insertPrev]
 - [insertNext]
