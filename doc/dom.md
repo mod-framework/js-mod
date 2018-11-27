@@ -17,7 +17,7 @@ mod.dom.clone(div.children);
 ```
 
 ## insert(parentNode, NodeList, offset)
-* offset 0
+* example
 ```html
 <div>
 	/*offset 0*/<button>A</button><button>B</button><button>C</button>/*offset -1*/
@@ -32,6 +32,7 @@ function new_example0(){
 	return a;
 }
 ```
+* offset 0
 ```html
 <div>
 	<button>TEST</button><button>TEST</button><button>A</button><button>B</button><button>C</button>
@@ -62,7 +63,6 @@ offset 0
 ```
 ```js
 mod.dom.insertPrev(div.children[2], [new_example0(),new_example0()], 0);
-mod.dom.insertPrev(div.children[1], [new_example0(),new_example0()], 1);
 
 function new_example0(){
 	var a=document.createElement("button");
