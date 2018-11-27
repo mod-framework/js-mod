@@ -17,14 +17,14 @@ mod.dom.clone(div.children);
 ```
 
 ## insert(parentNode, NodeList, offset)
-offset 0
+* offset 0
 ```html
 <div>
 	/*offset 0*/<button>A</button><button>B</button><button>C</button>/*offset -1*/
 </div>
 ```
 ```js
-mod.dom.insert(div, [new_example0(),new_example0()], 0);;
+mod.dom.insert(div, [new_example0(),new_example0()], 0);
 
 function new_example0(){
 	var a=document.createElement("button");
@@ -37,7 +37,7 @@ function new_example0(){
 	<button>TEST</button><button>TEST</button><button>A</button><button>B</button><button>C</button>
 </div>
 ```
-offset -1
+* offset -1
 ```js
 mod.dom.insert(div, [new_example0(),new_example0()], -1);
 
