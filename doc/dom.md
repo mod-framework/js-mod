@@ -23,8 +23,8 @@ mod.dom.clone(div.children);
 </div>
 ```
 ```js
-mod.dom.insert(div,[new_example0(),new_example0()],0);
-mod.dom.insert(div,[new_example0(),new_example0()],-1);
+mod.dom.insert(div, [new_example0(),new_example0()],  0);
+mod.dom.insert(div, [new_example0(),new_example0()], -1);
 function new_example0(){
 	var a=document.createElement("button");
 	a.textContent="TEST";
