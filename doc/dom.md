@@ -11,6 +11,8 @@
 ```js
 mod.dom.rot(div,"on");
 mod.dom.rot(div,"on","off","");
+mod.dom.rot([div,div],"on","off","");
+mod.dom.rot("html,body","on","off","");
 ```
 [back to top](#)
 
