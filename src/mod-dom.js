@@ -28,10 +28,10 @@ mod.dom=(function mod_dom(r){
 				if(a.length==2)a=[a[0],a[1],""];
 				for(var i=1,l=a.length;i<l;i++){
 					if(a[i]==""){
-						arr[x].className=n.replace(/(\s*)$/,"$1"+a[1]);
+						arr[x].className=n.replace(/(\s*)$/," "+a[1]).trim();
 						break;
 					}else if(n.match(a[i])){
-						arr[x].className=n.replace(new RegExp("(\s?)"+a[i]),"$1"+a[(i+1)%l||1]).trim();
+						arr[x].className=n.replace(new RegExp("(\s*)"+a[i])," "+a[(i+1)%l||1]).trim();
 						break;
 					}
 				}
