@@ -98,9 +98,9 @@ mod.dom=(function mod_dom(r){
 			}else{
 				var n=arr[x].className;
 				for(var i=1,l=a.length;i<l;i++){
-					if(n.match(a[i])){
+					if(n.match(new RegExp("\\b"+a[i]+"\\b"))){
 						ret.push(a[i]);
-						n=n.replace(new RegExp("(\s*)"+a[i]),"").trim();
+						n=n.replace(new RegExp("(\s*)\\b"+a[i]+"\\b"),"").trim();
 					}
 				}
 				arr[x].className=n;

@@ -8,11 +8,22 @@
 - [insertNext(parentNode, NodeList[, offset])](#insertnextparentnode-nodelist-offset)
 
 ## rot(NodeList, ...args)
+rotate class
 ```js
 mod.dom.rot(div,"on");
 mod.dom.rot(div,"on","off","");
 mod.dom.rot([div,div],"on","off","");
 mod.dom.rot("html,body","on","off","");
+```
+[back to top](#)
+
+## rmv(NodeList, ...args)
+remove class
+```js
+mod.dom.rot(div,"on");
+mod.dom.rot(div,"on","off");
+mod.dom.rot([div,div],"on","off");
+mod.dom.rot("html,body","on","off");
 ```
 [back to top](#)
 
