@@ -1,7 +1,9 @@
 # dom
 
 # class mod_dom
+- [evt(NodeList, type, listener, useCapture)](#evtnodelist-type-listener-usecapture) add event
 - [rot(NodeList, ...args)](#rotnodelist-args) toggle, rotate class name
+- [rmv(NodeList, ...args)](#rmvnodelist-args) remove class class name
 - [clone(NodeList)](#clonenodelist)
 - [insert(parentNode, NodeList, offset)](#insertparentnode-nodelist-offset)
 - [insertPrev(parentNode, NodeList[, offset])](#insertprevparentnode-nodelist-offset)
