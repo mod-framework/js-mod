@@ -1,7 +1,7 @@
 # dom
 
 # class mod_dom
-- [find(NodeList[, element])](#evtnodelist-type-listener-usecapture) query arraied css selector
+- [find(NodeList[, element])](findnodelist-element) query arraied css selector
 - [evt(NodeList, type, listener[, useCapture])](#evtnodelist-type-listener-usecapture) add event
 - [rot(NodeList, ...args)](#rotnodelist-args) toggle, rotate class name
 - [rmv(NodeList, ...args)](#rmvnodelist-args) remove class class name
@@ -14,7 +14,7 @@
 > NodeList(Array)
 query arraied css selector
 ```js
-mod.dom.evt([div,div,"body"],"click",function(e){  });
+mod.dom.evt([div,div,"body"]);
 mod.dom.find("html,body");
 ```
 [back to top](#)
