@@ -45,7 +45,7 @@ mod.dom=(function mod_dom(r){
 			if(arr[x].constructor==String){
 				arr2.push.apply(arr2,document.querySelectorAll(arr[x]));
 			}else{
-				arr[x].addEventListener(a[1],a[2]);
+				arr[x].addEventListener(a[1],a[2],a[3]);
 			}
 		}
 		if(arr2.length)a[0]=arr2,this.evt.apply(this,a);

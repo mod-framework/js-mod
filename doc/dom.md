@@ -7,7 +7,7 @@
 - [insertPrev(parentNode, NodeList[, offset])](#insertprevparentnode-nodelist-offset)
 - [insertNext(parentNode, NodeList[, offset])](#insertnextparentnode-nodelist-offset)
 
-## evt(NodeList, type, listener)
+## evt(NodeList, type, listener, useCapture)
 add event
 ```js
 mod.dom.evt(div,"click",function(e){  });
