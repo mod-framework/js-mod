@@ -1,7 +1,7 @@
 # dom
 
 # class mod_dom
-- [var(arr[, element[, prefix]])](#findnodelist-element) query cssRule(#prefix,name), HTMLElement(class="prefix name") name
+- [var(arr[, element[, prefix]])](#vararr-element-prefix) query cssRule(#prefix,name), HTMLElement(class="prefix name") name
 - [find(NodeList[, element])](#findnodelist-element) query arraied css selector
 - [evt(NodeList, type, listener[, useCapture])](#evtnodelist-type-listener-usecapture) add event
 - [rot(NodeList, ...args)](#rotnodelist-args) toggle, rotate class name
