@@ -1,7 +1,8 @@
 # dom
 
 # class mod_dom
-- [find(NodeList[, element])](findnodelist-element) query arraied css selector
+- [var(arr[, element[, prefix]])](#findnodelist-element) query cssRule(#prefix,name), HTMLElement(class="prefix name") name
+- [find(NodeList[, element])](#findnodelist-element) query arraied css selector
 - [evt(NodeList, type, listener[, useCapture])](#evtnodelist-type-listener-usecapture) add event
 - [rot(NodeList, ...args)](#rotnodelist-args) toggle, rotate class name
 - [rmv(NodeList, ...args)](#rmvnodelist-args) remove class class name
@@ -10,11 +11,19 @@
 - [insertPrev(parentNode, NodeList[, offset])](#insertprevparentnode-nodelist-offset)
 - [insertNext(parentNode, NodeList[, offset])](#insertnextparentnode-nodelist-offset)
 
+## var(arr[, element[, prefix]])
+query cssRule(#prefix,name), HTMLElement(class="prefix name") name
+```js
+mod.dom.var([]);
+mod.dom.var([],0,"aa");
+```
+[back to top](#)
+
 ## find(NodeList[, element])
 > NodeList(Array)
 query arraied css selector
 ```js
-mod.dom.evt([div,div,"body"]);
+mod.dom.find([div,div,"body"]);
 mod.dom.find("html,body");
 ```
 [back to top](#)
