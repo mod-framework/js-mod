@@ -7,6 +7,16 @@
 - [insertPrev(parentNode, NodeList[, offset])](#insertprevparentnode-nodelist-offset)
 - [insertNext(parentNode, NodeList[, offset])](#insertnextparentnode-nodelist-offset)
 
+## evt(NodeList, type, listener)
+add event
+```js
+mod.dom.evt(div,"click",function(e){  });
+mod.dom.evt(div,"click",function(e){  });
+mod.dom.evt([div,div],"click",function(e){  });
+mod.dom.evt("html,body","click",function(e){  });
+```
+[back to top](#)
+
 ## rot(NodeList, ...args)
 rotate class
 ```js
@@ -20,10 +30,10 @@ mod.dom.rot("html,body","on","off","");
 ## rmv(NodeList, ...args)
 remove class
 ```js
-mod.dom.rot(div,"on");
-mod.dom.rot(div,"on","off");
-mod.dom.rot([div,div],"on","off");
-mod.dom.rot("html,body","on","off");
+mod.dom.rmv(div,"on");
+mod.dom.rmv(div,"on","off");
+mod.dom.rmv([div,div],"on","off");
+mod.dom.rmv("html,body","on","off");
 ```
 [back to top](#)
 
