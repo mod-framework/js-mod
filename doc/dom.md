@@ -32,8 +32,8 @@ mod.dom.find("html,body");
 ## prop(NodeList, object)
 set property
 ```js
-mod.dom.prop([div,div,{onclick:function(){  }}]);
-mod.dom.prop("html,body",{onclick:function(){  }});
+mod.dom.prop([div,div],{onclick:function(){  }, id:"id1234"});
+mod.dom.prop("html,body",{onclick:function(){  }, id:"id1234"});
 ```
 [back to top](#)
 
