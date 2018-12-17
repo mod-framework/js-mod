@@ -84,8 +84,8 @@ mod.dom=(function mod_dom(r){
 				if(a[i]==""){
 					arr[x].className=n.replace(/(\s*)$/," "+a[1]).trim();
 					break;
-				}else if(b=a[i].replace(/ /g,"\\b|\\b"),n.match(new RegExp("\\b"+b+"\\b"))){
-					arr[x].className=n.replace(new RegExp("(\s*)\\b"+b+"\\b")," "+a[(i+1)%l||1]).trim();
+				}else if(b="\\b"+a[i].replace(/ /g,"\\b|\\b")+"\\b",n.match(new RegExp(b))){
+					arr[x].className=n.replace(new RegExp("(\s*)"+b)," "+a[(i+1)%l||1]).trim();
 					break;
 				}
 			}
@@ -98,9 +98,9 @@ mod.dom=(function mod_dom(r){
 		for(var ret=[],x=arr.length-1,a=arguments;x>=0;x--){
 			var n=arr[x].className;
 			for(var b,i=1,l=a.length;i<l;i++){
-				if(b=a[i].replace(/ /g,"\\b|\\b"),n.match(new RegExp("\\b"+a[i]+"\\b"))){
+				if(b="\\b"+a[i].replace(/ /g,"\\b|\\b")+"\\b",n.match(new RegExp(b))){
 					ret=i;
-					n=n.replace(new RegExp("(\s*)\\b"+b+"\\b"),"").trim();
+					n=n.replace(new RegExp("(\s*)"+b),"").trim();
 				}
 			}
 			arr[x].className=n;
