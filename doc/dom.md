@@ -22,6 +22,7 @@ mod.dom.var([],0,"aa");
 
 ## find(NodeList[, element])
 > NodeList(Array)
+
 query arraied css selector
 ```js
 mod.dom.find([div,div,"body"]);
@@ -60,6 +61,7 @@ mod.dom.rot("html,body","on","off","");
 
 ## rmv(NodeList, ...args)
 > index arguments
+
 remove class
 ```js
 mod.dom.rmv(div,"on");
