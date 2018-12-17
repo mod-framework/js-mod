@@ -28,6 +28,14 @@ mod.dom.find("html,body");
 ```
 [back to top](#)
 
+## prop(NodeList, object)
+set property
+```js
+mod.dom.prop([div,div,{onclick:function(){  }}]);
+mod.dom.prop("html,body",{onclick:function(){  }});
+```
+[back to top](#)
+
 ## evt(NodeList, type, listener, useCapture)
 add event
 ```js
@@ -43,6 +51,7 @@ rotate class
 ```js
 mod.dom.rot(div,"on");
 mod.dom.rot(div,"on","off","");
+mod.dom.rot(div,"on swap");
 mod.dom.rot([div,div],"on","off","");
 mod.dom.rot("html,body","on","off","");
 ```
