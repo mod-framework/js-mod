@@ -59,9 +59,11 @@ mod.dom.rot("html,body","on","off","");
 [back to top](#)
 
 ## rmv(NodeList, ...args)
+> index arguments
 remove class
 ```js
 mod.dom.rmv(div,"on");
+mod.dom.rmv(div,"on off");
 mod.dom.rmv(div,"on","off");
 mod.dom.rmv([div,div],"on","off");
 mod.dom.rmv("html,body","on","off");
