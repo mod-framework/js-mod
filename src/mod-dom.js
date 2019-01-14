@@ -20,16 +20,17 @@ mod.dom=(function mod_dom(r){
 	var:function(r,t,m){
 		m=m||"var";
 		for(var m0=new RegExp("^#"+m+"\\b"),rule,s=(t||document).querySelectorAll("style"),i=s.length-1;i>=0;i--){
-			rule = s[i].sheet.cssRules;
-	
+			rule=s[i].sheet.cssRules;
+
 			if(rule==null)continue;
-	
-			for(var j=rule.length-1,n;j>=0;j--){
+
+			for(var a,j=rule.length-1,n;j>=0;j--){
 				n=rule[j].selectorText;
 				if(!n)continue;
-				if(m0.exec(n)){
-					r[n.replace(/.*?,\s*/,"")]=rule[j];
-					rule[j].selectorText=n.split(",")[1];
+				if(m0.exec(n)&&(a=/ ([^,]+)/.exec(n))){
+					r[a[1]]=rule[j];
+					a=n.indexOf(",");
+					rule[j].selectorText=n.substr(a+1);
 				}
 			}
 		}
