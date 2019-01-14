@@ -13,10 +13,17 @@
 - [insertNext(parentNode, NodeList[, offset])](#insertnextparentnode-nodelist-offset)
 
 ## var(arr[, element[, prefix]])
-query cssRule(#prefix,name), HTMLElement(class="prefix name") name
+query cssRule(#prefix name) name, HTMLElement(class="prefix name") name
+```html
+<style>
+#var name_css_rule,html,body{margin:0;padding:0}
+</style>
+<div class="var name_element"></div>
+```
 ```js
-mod.dom.var([]);
-mod.dom.var([],0,"aa");
+var obj={};
+mod.dom.var(obj);
+mod.dom.var(obj,0,"aa");
 ```
 [back to top](#)
 
