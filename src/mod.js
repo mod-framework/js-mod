@@ -29,5 +29,9 @@ try{mod}catch(e){
 		}}
 		function err(e){cb.call(x,e);}
 	};
+	mod.url_host=(function(){
+		var a=document.querySelector("script[src~='mod.js']");
+		return a.src.replace("mod.js","");
+	})();
 	mod.load.prototype=Array.prototype;
 }
