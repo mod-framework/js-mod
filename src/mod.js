@@ -14,5 +14,20 @@ try{mod}catch(e){
 
 		console.log(args);
 	};
+	mod.xs=function(cb){
+		var x=new XMLHttpRequest();
+		x.onreadystatechange=function(){if(this.readyState==4)fin()};
+		x.onerror=err;
+		x.ontimeout=err;
+
+		return x;
+
+		function fin(){if(cb)switch(x.status/100|0){
+			case 1:case 3:break;
+			case 2:cb.call(x);break;
+			default:cb.call(x,x.status);break;
+		}}
+		function err(e){cb.call(x,e);}
+	};
 	mod.load.prototype=Array.prototype;
 }
