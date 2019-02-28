@@ -31,6 +31,6 @@ try{mod}catch(e){
 	};
 	mod.url_host=(function(a){
 		return a.src.replace("mod.js","");
-	})(document.querySelector("script[src~='mod.js']"));
+	})(document.querySelector("script[src*='mod.js']"));
 	mod.load.prototype=Array.prototype;
 }

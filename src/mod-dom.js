@@ -19,8 +19,10 @@ mod.dom=(function mod_dom(r){
 	},
 	var:function(r,t,m){
 		m=m||"var";
-		for(var m0=new RegExp("^#"+m+"\\b"),rule,s=(t||document).querySelectorAll("style"),i=s.length-1;i>=0;i--){
-			rule=s[i].sheet.cssRules;
+		for(var m0=new RegExp("^#"+m+"\\b"),rule,s=(t||document).styleSheets||(t||document).querySelectorAll("style"),i=s.length-1;i>=0;i--){
+			try{
+				rule=s[i].cssRules||s[i].rules||s[i].sheet.cssRules||s[i].sheet.rules;
+			}catch(e){continue}
 
 			if(rule==null)continue;
 
